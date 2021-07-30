@@ -1,7 +1,9 @@
 import React from 'react';
+import Page from '../page/page';
+import './app.scss';
 
 function App() {
-  return <p>Hello, world!</p>;
+  return <Page />;
 }
 
 export default App;
