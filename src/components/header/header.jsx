@@ -10,16 +10,24 @@ function Header() {
         <nav className={styles.nav}>
           <ul className={styles.list}>
             <li className={styles.item}>
-              <a href="/">Автомобили</a>
+              <a className={styles.link} href="/">
+                Автомобили
+              </a>
             </li>
             <li className={styles.item}>
-              <a href="/">Контакты</a>
+              <a className={styles.link} href="/">
+                Контакты
+              </a>
             </li>
             <li className={styles.item}>
-              <a href="/">Услуги</a>
+              <a className={styles.link} href="/">
+                Услуги
+              </a>
             </li>
             <li className={styles.item}>
-              <a href="/">Вакансии</a>
+              <a className={styles.link} href="/">
+                Вакансии
+              </a>
             </li>
           </ul>
         </nav>
