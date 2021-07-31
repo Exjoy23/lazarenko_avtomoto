@@ -1,23 +1,11 @@
-.section {
-  display: flex;
-  justify-content: center;
-  padding-top: 90px;
-}
-
-.container {
-  width: 100%;
-  max-width: 1206px;
-  min-width: 1024px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 .slider {
   width: 600px;
+  min-width: 600px;
   height: 494px;
   display: flex;
   flex-direction: column;
   gap: 39px 0;
+  margin-bottom: 90px;
 }
 
 .currentSlide {

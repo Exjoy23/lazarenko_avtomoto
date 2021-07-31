@@ -27,55 +27,53 @@ function Slider() {
   };
 
   return (
-    <section className={styles.section}>
-      <div className={styles.container}>
-        <div className={styles.slider}>
-          <div className={styles.currentSlide}>
-            <span className={styles.badge}>new model</span>
-            <img
-              className={styles.current}
-              width="600"
-              height="375"
-              src={slides[currentSlide]}
-              alt="авто"
-            />
-          </div>
-          <div className={styles.slides}>
-            <button
-              className={classNames(styles.button, styles.buttonPrev)}
-              onClick={onPrevButtonClick}
-              disabled={currentSlide === DEFAULT_SLIDE}
-            />
-            <img
-              className={styles.slide}
-              width="128"
-              height="80"
-              src={slide1}
-              alt="автомобиль"
-            />
-            <img
-              className={styles.slide}
-              width="128"
-              height="80"
-              src={slide2}
-              alt="интерьер"
-            />
-            <img
-              className={styles.slide}
-              width="128"
-              height="80"
-              src={slide3}
-              alt="спидометр"
-            />
-            <button
-              className={styles.button}
-              onClick={onNextButtonClick}
-              disabled={currentSlide === maxSlideIndex}
-            />
-          </div>
-        </div>
+    <div className={styles.slider}>
+      <div className={styles.currentSlide}>
+        <span className={styles.badge}>new model</span>
+        <img
+          className={styles.current}
+          width="600"
+          height="375"
+          src={slides[currentSlide]}
+          alt="авто"
+        />
       </div>
-    </section>
+      <div className={styles.slides}>
+        <button
+          className={classNames(styles.button, styles.buttonPrev)}
+          onClick={onPrevButtonClick}
+          type="button"
+          disabled={currentSlide === DEFAULT_SLIDE}
+        />
+        <img
+          className={styles.slide}
+          width="128"
+          height="80"
+          src={slide1}
+          alt="автомобиль"
+        />
+        <img
+          className={styles.slide}
+          width="128"
+          height="80"
+          src={slide2}
+          alt="интерьер"
+        />
+        <img
+          className={styles.slide}
+          width="128"
+          height="80"
+          src={slide3}
+          alt="спидометр"
+        />
+        <button
+          className={styles.button}
+          onClick={onNextButtonClick}
+          type="button"
+          disabled={currentSlide === maxSlideIndex}
+        />
+      </div>
+    </div>
   );
 }
 

@@ -3,3 +3,18 @@
   grid-template-rows: min-content 1fr min-content;
   height: 100vh;
 }
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1186px;
+  min-width: 1024px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  gap: 0 57px;
+}
