@@ -19,9 +19,14 @@
   display: flex;
   justify-content: space-between;
   font-weight: 600;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 22px;
+  padding-bottom: 22px;
   flex-wrap: wrap;
+}
+
+.item {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .link {
