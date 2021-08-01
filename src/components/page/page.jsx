@@ -3,6 +3,7 @@ import Footer from '../footer/footer';
 import Header from '../header/header';
 import Info from '../info/info';
 import Slider from '../slider/slider';
+import Tabs from '../tabs/tabs';
 import styles from './page.module.scss';
 
 function Page() {
@@ -13,6 +14,7 @@ function Page() {
         <div className={styles.container}>
           <Slider />
           <Info />
+          <Tabs />
         </div>
       </main>
       <Footer />

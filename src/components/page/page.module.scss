@@ -11,10 +11,11 @@
 
 .container {
   width: 100%;
-  max-width: 1186px;
+  max-width: 1205px;
   min-width: 1024px;
   padding-left: 10px;
   padding-right: 10px;
   display: flex;
-  gap: 0 57px;
+  flex-wrap: wrap;
+  gap: 90px 57px;
 }

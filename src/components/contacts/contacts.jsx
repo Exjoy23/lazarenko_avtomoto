@@ -1,0 +1,37 @@
+import React from 'react';
+import styles from './contacts.module.scss';
+
+function Contacts() {
+  return (
+    <div className={styles.contacts}>
+      <div className={styles.wrapper}>
+        <div className={styles.inner}>
+          <span className={styles.title}>Адрес</span>
+          <address className={styles.text}>
+            Санкт-Петербург,
+            <br />
+            набережная реки Карповки, дом 5
+          </address>
+        </div>
+        <div className={styles.inner}>
+          <span className={styles.title}>Режим работы</span>
+          <span className={styles.text}>Ежедневно, с 10:00 до 21:00</span>
+        </div>
+        <div className={styles.inner}>
+          <span className={styles.title}>Телефон</span>
+          <a className={styles.text} href="tel:88003335599">
+            8 (800) 333-55-99
+          </a>
+        </div>
+        <div className={styles.inner}>
+          <span className={styles.title}>E-mail</span>
+          <a className={styles.text} href="mailto:info@avto-moto.ru">
+            info@avto-moto.ru
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Contacts;

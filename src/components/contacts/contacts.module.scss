@@ -1,0 +1,32 @@
+.contacts {
+  display: flex;
+  gap: 0 74px;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px 0;
+  padding-top: 27px;
+  padding-left: 5px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+}
+
+.title {
+  font-weight: 700;
+  color: #1a212f;
+}
+
+.text {
+  font-weight: 600;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 19px;
+  color: #1a212f;
+}
