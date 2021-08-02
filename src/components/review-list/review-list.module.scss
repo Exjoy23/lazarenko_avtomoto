@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 31px;
+  padding-right: 10px;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  margin-top: -68px;
+  padding-left: 7px;
+  list-style: none;
+}
+
+.link {
+  position: relative;
+  z-index: 2;
+  width: 189px;
+  padding: 16.5px 20px;
+  text-transform: uppercase;
+  color: #d12136;
+  border: 1px solid #d12136;
+  font-weight: 600;
+  font-size: 14px;
+  align-self: flex-end;
+  letter-spacing: 1.4px;
+
+  &:hover {
+    background-color: #d12136;
+    color: #ffffff;
+  }
+}

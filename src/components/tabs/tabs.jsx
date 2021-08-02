@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import styles from './tabs.module.scss';
 import Contacts from '../contacts/contacts';
+import ReviewList from '../review-list/review-list';
 
 const TAB_1 = 1;
 const TAB_2 = 2;
@@ -87,6 +88,7 @@ function Tabs() {
           </table>
         </div>
       )}
+      {activeTab === TAB_2 && <ReviewList />}
       {activeTab === TAB_3 && <Contacts />}
     </div>
   );
