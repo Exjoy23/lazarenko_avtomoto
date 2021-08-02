@@ -1,4 +1,5 @@
 import React from 'react';
+import Map from '../map/map';
 import styles from './contacts.module.scss';
 
 function Contacts() {
@@ -29,6 +30,9 @@ function Contacts() {
             info@avto-moto.ru
           </a>
         </div>
+      </div>
+      <div className={styles.map}>
+        <Map />
       </div>
     </div>
   );
