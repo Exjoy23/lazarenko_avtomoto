@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import ReviewItem from '../review-item/review-item';
 import Modal from '../modal/modal';
@@ -7,9 +7,17 @@ import styles from './review-list.module.scss';
 function ReviewList() {
   const reviews = useSelector(({ dataSlice }) => dataSlice.reviews);
 
+  const [isModalActive, setIsModalActive] = useState(false);
+
+  const onButtonClick = (evt) => {
+    evt.preventDefault();
+    setIsModalActive(true);
+    document.body.style = 'overflow: hidden; padding-right: 17px';
+  };
+
   return (
     <div className={styles.wrapper}>
-      <a className={styles.link} href="/">
+      <a className={styles.link} href="/" onClick={onButtonClick}>
         Оставить отзыв
       </a>
       <ul className={styles.list}>
@@ -17,7 +25,7 @@ function ReviewList() {
           <ReviewItem key={item.id} {...item} />
         ))}
       </ul>
-      <Modal />
+      {isModalActive && <Modal onActive={setIsModalActive} />}
     </div>
   );
 }

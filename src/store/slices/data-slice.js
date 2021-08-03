@@ -26,7 +26,12 @@ const initialState = {
 const dataSlice = createSlice({
   name: 'data',
   initialState,
-  reducers: {},
+  reducers: {
+    addReview(state, { payload }) {
+      state.reviews.push(payload);
+    },
+  },
 });
 
+export const { addReview } = dataSlice.actions;
 export default dataSlice.reducer;
