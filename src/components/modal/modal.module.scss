@@ -1,0 +1,156 @@
+.wrapper {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(88, 87, 87, 0.6);
+}
+
+.modal {
+  width: 698px;
+  height: 415px;
+  background-color: #f5f5f9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  padding-top: 35px;
+  margin-bottom: 47px;
+}
+
+.form {
+  display: flex;
+  gap: 32px 28px;
+  padding-left: 35px;
+  padding-right: 35px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    top: 12px;
+    left: 12px;
+    background-image: url('../../assets/img/required.svg');
+  }
+}
+
+.warning {
+  color: #ff0000;
+  font-size: 14px;
+  position: absolute;
+  top: -20px;
+}
+
+.input {
+  width: 300px;
+  height: 50px;
+  border: 1px solid rgba(72, 73, 77, 0.2);
+  padding: 15px 25px;
+  font-size: 14px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 30px 0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0 12px;
+  padding-top: 6px;
+}
+
+.ratingText {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.text {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    top: 12px;
+    left: 12px;
+    background-image: url('../../assets/img/required.svg');
+  }
+}
+
+.textarea {
+  font-size: 14px;
+  width: 300px;
+  height: 118px;
+  padding: 15px 25px;
+  resize: none;
+  border: 1px solid rgba(72, 73, 77, 0.2);
+  font-family: 'Open-Sans', Arial, sans-serif;
+}
+
+.button {
+  width: 190px;
+  background-color: #d12136;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #bd0c21;
+  }
+}
+
+.close {
+  width: 15px;
+  height: 15px;
+  border: none;
+  background-color: transparent;
+  background-image: url('../../assets/img/close.svg');
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.wrong {
+  border: 1px solid #ff0000;
+}

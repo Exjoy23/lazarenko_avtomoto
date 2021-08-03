@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import ReviewItem from '../review-item/review-item';
+import Modal from '../modal/modal';
 import styles from './review-list.module.scss';
 
 function ReviewList() {
@@ -16,6 +17,7 @@ function ReviewList() {
           <ReviewItem key={item.id} {...item} />
         ))}
       </ul>
+      <Modal />
     </div>
   );
 }

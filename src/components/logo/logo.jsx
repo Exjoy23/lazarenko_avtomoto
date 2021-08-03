@@ -4,7 +4,8 @@ import styles from './logo.module.scss';
 
 function Logo() {
   return (
-    <a href="/">
+    /* eslint-disable */
+    <a className={styles.link}>
       <img
         className={styles.logo}
         src={logo}
