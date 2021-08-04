@@ -1,0 +1,19 @@
+.tableInner {
+  padding-top: 10px;
+  padding-left: 6px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 565px;
+}
+
+.data {
+  border-bottom: 1px solid #d7d9df;
+  padding-top: 22px;
+  padding-bottom: 9px;
+
+  &:nth-child(2) {
+    text-align: end;
+  }
+}

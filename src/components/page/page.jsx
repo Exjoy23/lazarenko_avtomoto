@@ -12,8 +12,12 @@ function Page() {
       <Header />
       <main className={styles.main}>
         <div className={styles.container}>
-          <Slider />
-          <Info />
+          <div className={styles.slider}>
+            <Slider />
+          </div>
+          <div className={styles.info}>
+            <Info />
+          </div>
           <Tabs />
         </div>
       </main>

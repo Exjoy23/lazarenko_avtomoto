@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import styles from './tabs.module.scss';
 import Contacts from '../contacts/contacts';
-import ReviewList from '../review-list/review-list';
+import Reviews from '../reviews/reviews';
+import Specs from '../specs/specs';
 
 const TAB_1 = 1;
 const TAB_2 = 2;
@@ -52,43 +53,8 @@ function Tabs() {
           Контакты
         </button>
       </div>
-      {activeTab === TAB_1 && (
-        <div className={styles.tableInner}>
-          <table className={styles.table}>
-            <tbody>
-              <tr>
-                <td className={styles.data}>Трансмиссия</td>
-                <td className={styles.data}>Роботизированная</td>
-              </tr>
-              <tr>
-                <td className={styles.data}>Мощность двигателя, л.с.</td>
-                <td className={styles.data}>249</td>
-              </tr>
-              <tr>
-                <td className={styles.data}>Тип двигателя</td>
-                <td className={styles.data}>Бензиновый</td>
-              </tr>
-              <tr>
-                <td className={styles.data}>Привод</td>
-                <td className={styles.data}>Полный</td>
-              </tr>
-              <tr>
-                <td className={styles.data}>Объем двигателя, л</td>
-                <td className={styles.data}>2.4</td>
-              </tr>
-              <tr>
-                <td className={styles.data}>Макс. крутящий момент</td>
-                <td className={styles.data}>370/4500</td>
-              </tr>
-              <tr>
-                <td className={styles.data}>Количество цилиндров</td>
-                <td className={styles.data}>4</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      )}
-      {activeTab === TAB_2 && <ReviewList />}
+      {activeTab === TAB_1 && <Specs />}
+      {activeTab === TAB_2 && <Reviews />}
       {activeTab === TAB_3 && <Contacts />}
     </div>
   );

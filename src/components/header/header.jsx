@@ -1,12 +1,18 @@
 import React from 'react';
-import Logo from '../logo/logo';
 import styles from './header.module.scss';
+import logo from '../../assets/img/logo.svg';
 
 function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Logo />
+        <img
+          className={styles.logo}
+          src={logo}
+          width="132"
+          height="54"
+          alt="Логотип Авто-Мото"
+        />
         <nav className={styles.nav}>
           <ul className={styles.list}>
             <li className={styles.item}>

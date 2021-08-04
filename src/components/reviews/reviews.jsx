@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import ReviewItem from '../review-item/review-item';
 import Modal from '../modal/modal';
-import styles from './review-list.module.scss';
+import styles from './reviews.module.scss';
 
-function ReviewList() {
+function Reviews() {
   const reviews = useSelector(({ dataSlice }) => dataSlice.reviews);
 
   const [isModalActive, setIsModalActive] = useState(false);
@@ -30,4 +30,4 @@ function ReviewList() {
   );
 }
 
-export default ReviewList;
+export default Reviews;

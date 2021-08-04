@@ -27,10 +27,8 @@
 
 .form {
   display: flex;
-  gap: 32px 28px;
   padding-left: 35px;
   padding-right: 35px;
-  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -38,7 +36,7 @@
 .inner {
   display: flex;
   flex-direction: column;
-  gap: 16px 0;
+  margin-right: 28px;
 }
 
 .name {
@@ -55,6 +53,10 @@
     left: 12px;
     background-image: url('../../assets/img/required.svg');
   }
+}
+
+.label {
+  margin-bottom: 17px;
 }
 
 .warning {
@@ -75,19 +77,19 @@
 .comment {
   display: flex;
   flex-direction: column;
-  gap: 30px 0;
 }
 
 .rating {
   display: flex;
   align-items: center;
-  gap: 0 12px;
-  padding-top: 6px;
+  padding-top: 8px;
+  margin-bottom: 29px;
 }
 
 .ratingText {
   font-weight: 600;
   font-size: 15px;
+  margin-right: 13px;
 }
 
 .text {
@@ -112,6 +114,7 @@
   resize: none;
   border: 1px solid rgba(72, 73, 77, 0.2);
   font-family: 'Open-Sans', Arial, sans-serif;
+  margin-bottom: 31px;
 }
 
 .button {

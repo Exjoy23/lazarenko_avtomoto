@@ -7,10 +7,10 @@ function Info() {
     <div>
       <h2 className={styles.title}>Марпех 11</h2>
       <ul className={styles.list}>
-        <li className={styles.fuel}>бензин</li>
-        <li className={styles.box}>механика</li>
-        <li className={styles.power}>100 л.с.</li>
-        <li className={styles.engine}>1.4 л</li>
+        <li className={classNames(styles.item, styles.fuel)}>бензин</li>
+        <li className={classNames(styles.item, styles.box)}>механика</li>
+        <li className={classNames(styles.item, styles.power)}>100 л.с.</li>
+        <li className={classNames(styles.item, styles.engine)}>1.4 л</li>
       </ul>
       <div className={styles.inner}>
         <span className={styles.price}>2&nbsp;300&nbsp;000&nbsp;&#8381;</span>

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import StarRatings from 'react-star-ratings';
 import styles from './modal.module.scss';
 import { useDispatch } from 'react-redux';
@@ -7,6 +8,7 @@ import { addReview } from '../../store/slices/data-slice';
 
 const DEFAULT_RATING = 0;
 const MIN_LENGTH = 1;
+const ESCAPE = 'Escape';
 
 let id = 3;
 
@@ -20,13 +22,35 @@ function Modal({ onActive }) {
   const [isNameWrong, setIsNameWrong] = useState(false);
   const [isCommentWrong, setIsCommentWrong] = useState(false);
 
-  const onClose = (evt) => {
+  const nameRef = useRef(null);
+
+  const closeModal = useCallback(() => {
+    onActive(false);
+    document.body.style = 'overflow: normal; padding-right: 0';
+  }, [onActive]);
+
+  useEffect(() => {
+    nameRef.current.focus();
+
+    const onEscapeKeydown = (evt) => {
+      if (evt.code === ESCAPE) {
+        closeModal();
+      }
+    };
+
+    document.addEventListener('keydown', onEscapeKeydown);
+
+    return () => {
+      document.removeEventListener('keydown', onEscapeKeydown);
+    };
+  }, [closeModal]);
+
+  const onModalClick = (evt) => {
     if (
       evt.target.classList.value === styles.wrapper ||
       evt.target.classList.value === styles.close
     ) {
-      onActive(false);
-      document.body.style = 'overflow: normal; padding-right: 0';
+      closeModal();
     }
   };
 
@@ -59,34 +83,36 @@ function Modal({ onActive }) {
           rating,
         }),
       );
-      onActive(false);
-      document.body.style = 'overflow: normal; padding-right: 0';
+      closeModal();
     }
   };
 
   return (
-    <div className={styles.wrapper} onClick={onClose}>
+    <div className={styles.wrapper} onClick={onModalClick}>
       <div className={styles.modal}>
         <h2 className={styles.title}>Оставить отзыв</h2>
         <form className={styles.form} onSubmit={onFormSubmit}>
           <div className={styles.inner}>
-            <label className={styles.name}>
+            <label className={classNames(styles.label, styles.name)}>
               {isNameWrong && (
                 <span className={styles.warning}>
                   Пожалуйста, заполните поле
                 </span>
               )}
               <input
-                className={styles.input}
+                className={classNames(styles.input, {
+                  [styles.wrong]: isNameWrong,
+                })}
                 type="text"
                 placeholder="Имя"
                 value={name}
                 onChange={(evt) => {
                   setName(evt.target.value);
                 }}
+                ref={nameRef}
               />
             </label>
-            <label>
+            <label className={styles.label}>
               <input
                 className={styles.input}
                 type="text"
@@ -97,7 +123,7 @@ function Modal({ onActive }) {
                 }}
               />
             </label>
-            <label>
+            <label className={styles.label}>
               <input
                 className={styles.input}
                 type="text"
@@ -127,7 +153,9 @@ function Modal({ onActive }) {
                 </span>
               )}
               <textarea
-                className={styles.textarea}
+                className={classNames(styles.textarea, {
+                  [styles.wrong]: isCommentWrong,
+                })}
                 cols="30"
                 rows="10"
                 placeholder="Комментарий"

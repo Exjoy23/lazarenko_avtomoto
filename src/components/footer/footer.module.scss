@@ -22,12 +22,15 @@
   padding-top: 22px;
   padding-bottom: 22px;
   flex-wrap: wrap;
-  gap: 0 40px;
 }
 
 .item {
   padding-top: 10px;
   padding-bottom: 10px;
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
 }
 
 .link {

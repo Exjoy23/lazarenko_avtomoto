@@ -2,8 +2,8 @@
   margin: 0;
   font-size: 30px;
   font-weight: 700;
-  margin-top: -13px;
-  margin-bottom: 67px;
+  margin-top: -10px;
+  margin-bottom: 25px;
 }
 
 .list {
@@ -12,21 +12,27 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 50px 14px;
   padding-left: 7px;
-  margin-bottom: 43px;
+  margin-bottom: 41px;
   color: #a3a4a6;
 }
 
-.fuel {
+.item {
   position: relative;
+  padding-top: 43px;
 
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.fuel {
   &::after {
     content: '';
     width: 40px;
     height: 40px;
     position: absolute;
-    top: -43px;
+    top: 0;
     left: 2px;
     background-image: url('../../assets/img/fuel.svg');
     background-repeat: no-repeat;
@@ -34,14 +40,12 @@
 }
 
 .box {
-  position: relative;
-
   &::after {
     content: '';
     width: 40px;
     height: 40px;
     position: absolute;
-    top: -43px;
+    top: 0;
     left: 18px;
     background-image: url('../../assets/img/box.svg');
     background-repeat: no-repeat;
@@ -49,14 +53,12 @@
 }
 
 .power {
-  position: relative;
-
   &::after {
     content: '';
     width: 40px;
     height: 40px;
     position: absolute;
-    top: -43px;
+    top: 0;
     left: 9px;
     background-image: url('../../assets/img/power.svg');
     background-repeat: no-repeat;
@@ -64,7 +66,6 @@
 }
 
 .engine {
-  position: relative;
   padding-left: 16px;
 
   &::after {
@@ -72,7 +73,7 @@
     width: 40px;
     height: 40px;
     position: absolute;
-    top: -43px;
+    top: 0;
     left: 15px;
     background-image: url('../../assets/img/engine.svg');
     background-repeat: no-repeat;
@@ -82,13 +83,13 @@
 .inner {
   display: flex;
   align-items: center;
-  gap: 0 34px;
   margin-bottom: 40px;
 }
 
 .price {
   font-weight: 700;
   font-size: 35px;
+  margin-right: 35px;
 }
 
 .oldPrice {
@@ -112,7 +113,6 @@
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 16px 0;
   margin-left: -2px;
 }
 
@@ -129,6 +129,7 @@
   background-color: #d12136;
   color: #ffffff;
   width: 196px;
+  margin-bottom: 17px;
 
   &:hover {
     background-color: #bd0c21;

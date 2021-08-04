@@ -57,7 +57,7 @@
   margin: 0;
   font-size: 15px;
   padding-left: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   line-height: 20px;
 }
 
@@ -68,7 +68,6 @@
 
 .rating {
   display: flex;
-  gap: 0 22px;
   align-items: center;
   margin-bottom: 28px;
 }
@@ -76,11 +75,11 @@
 .ratingText {
   font-size: 15px;
   color: #d12136;
+  margin-left: 22px;
 }
 
 .time {
   display: flex;
-  gap: 0 27px;
   align-items: center;
 }
 
@@ -88,6 +87,7 @@
   font-size: 14px;
   color: #000000;
   opacity: 0.4;
+  margin-right: 26px;
 }
 
 .timeLink {
