@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import Map from '../map/map';
 import styles from './contacts.module.scss';
 
@@ -20,13 +21,19 @@ function Contacts() {
         </div>
         <div className={styles.inner}>
           <span className={styles.title}>Телефон</span>
-          <a className={styles.text} href="tel:88003335599">
+          <a
+            className={classNames(styles.link, styles.text)}
+            href="tel:88003335599"
+          >
             8 (800) 333-55-99
           </a>
         </div>
         <div className={styles.inner}>
           <span className={styles.title}>E-mail</span>
-          <a className={styles.text} href="mailto:info@avto-moto.ru">
+          <a
+            className={classNames(styles.link, styles.text)}
+            href="mailto:info@avto-moto.ru"
+          >
             info@avto-moto.ru
           </a>
         </div>
