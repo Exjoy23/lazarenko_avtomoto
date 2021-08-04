@@ -44,6 +44,7 @@ function Slider() {
           onClick={onPrevButtonClick}
           type="button"
           disabled={currentSlide === DEFAULT_SLIDE}
+          aria-label="показать предыдущий слайд"
         />
         <img
           className={styles.slide}
@@ -71,6 +72,7 @@ function Slider() {
           onClick={onNextButtonClick}
           type="button"
           disabled={currentSlide === maxSlideIndex}
+          aria-label="показать следующий слайд"
         />
       </div>
     </div>

@@ -5,20 +5,33 @@ import StarRatings from 'react-star-ratings';
 import styles from './modal.module.scss';
 import { useDispatch } from 'react-redux';
 import { addReview } from '../../store/slices/data-slice';
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 const DEFAULT_RATING = 0;
+const DEFAULT_TIME = 'только что';
 const MIN_LENGTH = 1;
 const ESCAPE = 'Escape';
+const ModalFields = {
+  RATING: 'rating',
+  NAME: 'name',
+  PLUS: 'plus',
+  MINUS: 'minus',
+  COMMENT: 'comment',
+};
 
 let id = 3;
 
 function Modal({ onActive }) {
   const dispatch = useDispatch();
-  const [rating, setRating] = useState(DEFAULT_RATING);
-  const [name, setName] = useState('');
-  const [plus, setPlus] = useState('');
-  const [minus, setMinus] = useState('');
-  const [comment, setComment] = useState('');
+
+  const [rating, setRating] = useLocalStorage(
+    ModalFields.RATING,
+    DEFAULT_RATING,
+  );
+  const [name, setName] = useLocalStorage(ModalFields.NAME, '');
+  const [plus, setPlus] = useLocalStorage(ModalFields.PLUS, '');
+  const [minus, setMinus] = useLocalStorage(ModalFields.MINUS, '');
+  const [comment, setComment] = useLocalStorage(ModalFields.COMMENT, '');
   const [isNameWrong, setIsNameWrong] = useState(false);
   const [isCommentWrong, setIsCommentWrong] = useState(false);
 
@@ -81,9 +94,15 @@ function Modal({ onActive }) {
           minus,
           comment,
           rating,
+          time: DEFAULT_TIME,
         }),
       );
       closeModal();
+      setRating(DEFAULT_RATING);
+      setName('');
+      setPlus('');
+      setMinus('');
+      setComment('');
     }
   };
 
@@ -139,11 +158,12 @@ function Modal({ onActive }) {
             <div className={styles.rating}>
               <span className={styles.ratingText}>Оцените товар:</span>
               <StarRatings
-                rating={rating}
+                rating={+rating}
                 changeRating={setRating}
                 starDimension="27px"
                 starSpacing="4px"
                 starRatedColor="rgb(209, 33, 54)"
+                starHoverColor="rgb(209, 33, 54)"
               />
             </div>
             <div className={styles.text}>

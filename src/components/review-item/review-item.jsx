@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import StarRatings from 'react-star-ratings';
 import styles from './review-item.module.scss';
 
-function ReviewItem({ name, plus, minus, comment, rating }) {
+function ReviewItem({ name, plus, minus, comment, rating, time }) {
   return (
     <li className={styles.item}>
       <h2 className={styles.name}>{name}</h2>
@@ -34,7 +34,7 @@ function ReviewItem({ name, plus, minus, comment, rating }) {
         <span className={styles.ratingText}>Советует</span>
       </div>
       <div className={styles.time}>
-        <span className={styles.timeText}>1 минуту назад</span>
+        <span className={styles.timeText}>{time}</span>
         <a className={styles.timeLink} href="/">
           Ответить
         </a>
@@ -49,6 +49,7 @@ ReviewItem.propTypes = {
   minus: PropTypes.string.isRequired,
   comment: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
+  time: PropTypes.string.isRequired,
 };
 
 export default ReviewItem;
