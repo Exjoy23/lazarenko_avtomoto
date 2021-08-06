@@ -26,7 +26,7 @@ function Info() {
         </div>
         <div>
           <a className={classNames(styles.button, styles.credit)} href="/">
-            в кредит от 11 000&nbsp;&#8381;
+            в кредит от 11&nbsp;000&nbsp;&#8381;
           </a>
         </div>
       </div>

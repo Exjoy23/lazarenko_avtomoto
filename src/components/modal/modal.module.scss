@@ -72,6 +72,10 @@
   border: 1px solid rgba(72, 73, 77, 0.2);
   padding: 15px 25px;
   font-size: 14px;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .comment {
@@ -115,6 +119,10 @@
   border: 1px solid rgba(72, 73, 77, 0.2);
   font-family: 'Open-Sans', Arial, sans-serif;
   margin-bottom: 31px;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .button {
