@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 
-.currentSlide {
+.current_slide {
   position: relative;
   margin-bottom: 42px;
 }
@@ -58,7 +58,7 @@
     cursor: pointer;
   }
 
-  &Prev {
+  &_prev {
     transform: rotate(180deg);
   }
 

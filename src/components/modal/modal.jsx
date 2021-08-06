@@ -75,13 +75,17 @@ function Modal({ onActive }) {
 
     if (!isNameExist) {
       setIsNameWrong(true);
-    } else {
+    }
+
+    if (isNameExist) {
       setIsNameWrong(false);
     }
 
     if (!isCommentExist) {
       setIsCommentWrong(true);
-    } else {
+    }
+
+    if (isCommentExist) {
       setIsCommentWrong(false);
     }
 
@@ -156,7 +160,7 @@ function Modal({ onActive }) {
           </div>
           <div className={styles.comment}>
             <div className={styles.rating}>
-              <span className={styles.ratingText}>Оцените товар:</span>
+              <span className={styles.rating_text}>Оцените товар:</span>
               <StarRatings
                 rating={+rating}
                 changeRating={setRating}
@@ -172,18 +176,20 @@ function Modal({ onActive }) {
                   Пожалуйста, заполните поле
                 </span>
               )}
-              <textarea
-                className={classNames(styles.textarea, {
-                  [styles.wrong]: isCommentWrong,
-                })}
-                cols="30"
-                rows="10"
-                placeholder="Комментарий"
-                value={comment}
-                onChange={(evt) => {
-                  setComment(evt.target.value);
-                }}
-              />
+              <label>
+                <textarea
+                  className={classNames(styles.textarea, {
+                    [styles.wrong]: isCommentWrong,
+                  })}
+                  cols="30"
+                  rows="10"
+                  placeholder="Комментарий"
+                  value={comment}
+                  onChange={(evt) => {
+                    setComment(evt.target.value);
+                  }}
+                />
+              </label>
             </div>
           </div>
           <button className={styles.button} type="submit">

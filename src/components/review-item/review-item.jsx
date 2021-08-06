@@ -9,13 +9,13 @@ function ReviewItem({ name, plus, minus, comment, rating, time }) {
     <li className={styles.item}>
       <h2 className={styles.name}>{name}</h2>
       <div>
-        <p className={classNames(styles.title, styles.titlePlus)}>
+        <p className={classNames(styles.title, styles.title_plus)}>
           Достоинства
         </p>
         <p className={styles.text}>{plus}</p>
       </div>
       <div>
-        <p className={classNames(styles.title, styles.titleMinus)}>
+        <p className={classNames(styles.title, styles.title_minus)}>
           Недостатки
         </p>
         <p className={styles.text}>{minus}</p>
@@ -31,11 +31,11 @@ function ReviewItem({ name, plus, minus, comment, rating, time }) {
           starSpacing="2px"
           starRatedColor="rgb(209, 33, 54)"
         />
-        <span className={styles.ratingText}>Советует</span>
+        <span className={styles.rating_text}>Советует</span>
       </div>
       <div className={styles.time}>
-        <span className={styles.timeText}>{time}</span>
-        <a className={styles.timeLink} href="/">
+        <span className={styles.time_text}>{time}</span>
+        <a className={styles.time_link} href="/">
           Ответить
         </a>
       </div>

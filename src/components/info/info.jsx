@@ -19,12 +19,16 @@ function Info() {
         </span>
       </div>
       <div className={styles.buttons}>
-        <a className={classNames(styles.button, styles.request)} href="/">
-          оставить заявку
-        </a>
-        <a className={classNames(styles.button, styles.credit)} href="/">
-          в кредит от 11 000&nbsp;&#8381;
-        </a>
+        <div>
+          <a className={classNames(styles.button, styles.request)} href="/">
+            оставить заявку
+          </a>
+        </div>
+        <div>
+          <a className={classNames(styles.button, styles.credit)} href="/">
+            в кредит от 11 000&nbsp;&#8381;
+          </a>
+        </div>
       </div>
     </div>
   );

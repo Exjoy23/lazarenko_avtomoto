@@ -28,7 +28,7 @@ function Slider() {
 
   return (
     <div className={styles.slider}>
-      <div className={styles.currentSlide}>
+      <div className={styles.current_slide}>
         <span className={styles.badge}>new model</span>
         <img
           className={styles.current}
@@ -40,7 +40,7 @@ function Slider() {
       </div>
       <div className={styles.slides}>
         <button
-          className={classNames(styles.button, styles.buttonPrev)}
+          className={classNames(styles.button, styles.button_prev)}
           onClick={onPrevButtonClick}
           type="button"
           disabled={currentSlide === DEFAULT_SLIDE}

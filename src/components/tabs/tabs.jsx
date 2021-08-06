@@ -24,7 +24,7 @@ function Tabs() {
       <div className={styles.inner}>
         <button
           className={classNames(styles.button, {
-            [styles.buttonActive]: activeTab === TAB_1,
+            [styles.button_active]: activeTab === TAB_1,
           })}
           onClick={onButtonClick}
           type="button"
@@ -34,7 +34,7 @@ function Tabs() {
         </button>
         <button
           className={classNames(styles.button, {
-            [styles.buttonActive]: activeTab === TAB_2,
+            [styles.button_active]: activeTab === TAB_2,
           })}
           onClick={onButtonClick}
           type="button"
@@ -44,7 +44,7 @@ function Tabs() {
         </button>
         <button
           className={classNames(styles.button, {
-            [styles.buttonActive]: activeTab === TAB_3,
+            [styles.button_active]: activeTab === TAB_3,
           })}
           onClick={onButtonClick}
           type="button"

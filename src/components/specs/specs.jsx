@@ -3,7 +3,7 @@ import styles from './specs.module.scss';
 
 function Specs() {
   return (
-    <div className={styles.tableInner}>
+    <div className={styles.wrapper}>
       <table className={styles.table}>
         <tbody>
           <tr>

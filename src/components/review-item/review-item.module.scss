@@ -18,7 +18,7 @@
   font-size: 15px;
   margin-bottom: 5px;
 
-  &Plus {
+  &_plus {
     padding-left: 19px;
     position: relative;
 
@@ -35,7 +35,7 @@
     }
   }
 
-  &Minus {
+  &_minus {
     padding-left: 19px;
     position: relative;
 
@@ -74,7 +74,7 @@
   margin-bottom: 28px;
 }
 
-.ratingText {
+.rating_text {
   font-size: 15px;
   color: #d12136;
   margin-left: 22px;
@@ -85,14 +85,14 @@
   align-items: center;
 }
 
-.timeText {
+.time_text {
   font-size: 14px;
   color: #000000;
   opacity: 0.4;
   margin-right: 26px;
 }
 
-.timeLink {
+.time_link {
   color: #d12136;
 
   &:hover {
