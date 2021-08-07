@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import ReviewItem from '../review-item/review-item';
 import Modal from '../modal/modal';
@@ -12,8 +12,17 @@ function Reviews() {
   const onButtonClick = (evt) => {
     evt.preventDefault();
     setIsModalActive(true);
-    document.body.style = 'overflow: hidden; padding-right: 17px';
   };
+
+  useEffect(() => {
+    if (isModalActive) {
+      document.body.style = 'overflow: hidden; padding-right: 17px';
+    }
+
+    if (!isModalActive) {
+      document.body.style = 'overflow: visible; padding-right: 0';
+    }
+  }, [isModalActive]);
 
   return (
     <div className={styles.wrapper}>
@@ -26,7 +35,7 @@ function Reviews() {
           <ReviewItem key={item.id} {...item} />
         ))}
       </ul>
-      {isModalActive && <Modal onActive={setIsModalActive} />}
+      <Modal onActive={setIsModalActive} isOpen={isModalActive} />
     </div>
   );
 }
