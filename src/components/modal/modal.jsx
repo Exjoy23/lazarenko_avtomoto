@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import StarRatings from 'react-star-ratings';
+import ReactStars from 'react-rating-stars-component';
 import styles from './modal.module.scss';
 import { useDispatch } from 'react-redux';
 import { addReview } from '../../store/slices/data-slice';
@@ -161,13 +161,15 @@ function Modal({ onActive }) {
           <div className={styles.comment}>
             <div className={styles.rating}>
               <span className={styles.rating_text}>Оцените товар:</span>
-              <StarRatings
-                rating={+rating}
-                changeRating={setRating}
-                starDimension="27px"
-                starSpacing="4px"
-                starRatedColor="rgb(209, 33, 54)"
-                starHoverColor="rgb(209, 33, 54)"
+              <ReactStars
+                count={5}
+                value={+rating}
+                onChange={setRating}
+                activeColor="rgb(209, 33, 54)"
+                color="rgba(189, 190, 194, 0.7)"
+                size={35}
+                a11y="true"
+                classNames={styles.stars}
               />
             </div>
             <div className={styles.text}>

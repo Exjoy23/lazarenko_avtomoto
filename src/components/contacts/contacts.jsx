@@ -6,6 +6,7 @@ import styles from './contacts.module.scss';
 function Contacts() {
   return (
     <div className={styles.contacts}>
+      <h2 className="visually-hidden">Контакты</h2>
       <div className={styles.wrapper}>
         <div className={styles.inner}>
           <span className={styles.title}>Адрес</span>

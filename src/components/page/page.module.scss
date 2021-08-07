@@ -9,7 +9,7 @@
   justify-content: center;
 }
 
-.container {
+.inner {
   width: 100%;
   max-width: 1205px;
   min-width: 768px;
@@ -17,14 +17,26 @@
   padding-right: 10px;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 1020px) {
+    justify-content: center;
+  }
 }
 
 .slider {
   margin-right: 60px;
   margin-bottom: 90px;
+
+  @media (max-width: 1020px) {
+    margin-left: 60px;
+  }
 }
 
 .info {
-  margin-right: 50px;
   margin-bottom: 50px;
+
+  @media (max-width: 1020px) {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }

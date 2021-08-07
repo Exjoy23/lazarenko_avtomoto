@@ -28,6 +28,9 @@ function Slider() {
 
   return (
     <div className={styles.slider}>
+      <h2 className="visually-hidden">
+        Демонстрация интерьера и экстерьера автомобиля
+      </h2>
       <div className={styles.current_slide}>
         <span className={styles.badge}>new model</span>
         <img

@@ -11,7 +11,10 @@ function Page() {
     <div className={styles.wrapper}>
       <Header />
       <main className={styles.main}>
-        <div className={styles.container}>
+        <h1 className="visually-hidden">
+          Страница предложения автомобиля Марпех 11
+        </h1>
+        <section className={styles.inner}>
           <div className={styles.slider}>
             <Slider />
           </div>
@@ -19,7 +22,7 @@ function Page() {
             <Info />
           </div>
           <Tabs />
-        </div>
+        </section>
       </main>
       <Footer />
     </div>

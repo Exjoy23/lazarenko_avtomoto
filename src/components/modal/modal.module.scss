@@ -86,7 +86,7 @@
 .rating {
   display: flex;
   align-items: center;
-  padding-top: 8px;
+  padding-top: 4px;
   margin-bottom: 29px;
 }
 
@@ -164,4 +164,10 @@
 
 .wrong {
   border: 1px solid #ff0000;
+}
+
+.stars {
+  width: 167px;
+  display: flex;
+  justify-content: space-between;
 }

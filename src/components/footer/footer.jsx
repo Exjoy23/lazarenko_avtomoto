@@ -4,7 +4,7 @@ import styles from './footer.module.scss';
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
+      <div className={styles.wrapper}>
         <ul className={styles.list}>
           <li className={styles.item}>
             <a className={styles.link} href="/">

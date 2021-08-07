@@ -6,12 +6,14 @@ function Info() {
   return (
     <div>
       <h2 className={styles.title}>Марпех 11</h2>
+      <h3 className="visually-hidden">Технические характеристики автомобиля</h3>
       <ul className={styles.list}>
         <li className={classNames(styles.item, styles.fuel)}>бензин</li>
         <li className={classNames(styles.item, styles.box)}>механика</li>
         <li className={classNames(styles.item, styles.power)}>100 л.с.</li>
         <li className={classNames(styles.item, styles.engine)}>1.4 л</li>
       </ul>
+      <h3 className="visually-hidden">Цена авто Марпех 11</h3>
       <div className={styles.inner}>
         <span className={styles.price}>2&nbsp;300&nbsp;000&nbsp;&#8381;</span>
         <span className={styles.oldPrice}>

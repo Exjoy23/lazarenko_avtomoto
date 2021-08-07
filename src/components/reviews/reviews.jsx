@@ -17,6 +17,7 @@ function Reviews() {
 
   return (
     <div className={styles.wrapper}>
+      <h2 className="visually-hidden">Отзывы</h2>
       <a className={styles.link} href="/" onClick={onButtonClick}>
         Оставить отзыв
       </a>

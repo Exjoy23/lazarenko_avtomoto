@@ -9,6 +9,10 @@
   padding-top: 29px;
   padding-left: 6px;
   margin-right: 74px;
+
+  @media (max-width: 1020px) {
+    margin-right: 35px;
+  }
 }
 
 .inner {
