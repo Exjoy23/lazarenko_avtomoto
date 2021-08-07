@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import styles from './info.module.scss';
 
@@ -22,14 +23,14 @@ function Info() {
       </div>
       <div className={styles.buttons}>
         <div>
-          <a className={classNames(styles.button, styles.request)} href="/">
+          <Link className={classNames(styles.button, styles.request)} to="/">
             оставить заявку
-          </a>
+          </Link>
         </div>
         <div>
-          <a className={classNames(styles.button, styles.credit)} href="/">
+          <Link className={classNames(styles.button, styles.credit)} to="/">
             в кредит от 11&nbsp;000&nbsp;&#8381;
-          </a>
+          </Link>
         </div>
       </div>
     </div>

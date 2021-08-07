@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './header.module.scss';
 import logo from '../../assets/img/logo.svg';
 
@@ -16,24 +17,24 @@ function Header() {
         <nav className={styles.nav}>
           <ul className={styles.list}>
             <li className={styles.item}>
-              <a className={styles.link} href="/">
+              <Link className={styles.link} to="/">
                 Автомобили
-              </a>
+              </Link>
             </li>
             <li className={styles.item}>
-              <a className={styles.link} href="/">
+              <Link className={styles.link} to="/">
                 Контакты
-              </a>
+              </Link>
             </li>
             <li className={styles.item}>
-              <a className={styles.link} href="/">
+              <Link className={styles.link} to="/">
                 Услуги
-              </a>
+              </Link>
             </li>
             <li className={styles.item}>
-              <a className={styles.link} href="/">
+              <Link className={styles.link} to="/">
                 Вакансии
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
