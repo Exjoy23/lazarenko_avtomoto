@@ -109,6 +109,7 @@ function Modal({ onActive, isOpen }) {
                 setName(evt.target.value);
               }}
               ref={nameRef}
+              aria-label="Имя"
             />
           </label>
           <label className={styles.label}>
@@ -120,6 +121,7 @@ function Modal({ onActive, isOpen }) {
               onChange={(evt) => {
                 setPlus(evt.target.value);
               }}
+              aria-label="Достоинства"
             />
           </label>
           <label className={styles.label}>
@@ -131,6 +133,7 @@ function Modal({ onActive, isOpen }) {
               onChange={(evt) => {
                 setMinus(evt.target.value);
               }}
+              aria-label="Недостатки"
             />
           </label>
         </div>
@@ -164,6 +167,7 @@ function Modal({ onActive, isOpen }) {
                 onChange={(evt) => {
                   setComment(evt.target.value);
                 }}
+                aria-label="Комментарий"
               />
             </label>
           </div>
